@@ -57,13 +57,13 @@ gem "bootsnap", require: false
 #
 
 # FirendlyId to create pretty URLs and work with human-friendly strings as if they were numeric ids.
-gem 'friendly_id', '~> 5.4.0'
+gem "friendly_id", "~> 5.4.0"
 
 # NameOfPerson to present names for English-language applications where a basic model of first and last name(s) combined is sufficient
-gem 'name_of_person'
+gem "name_of_person"
 
 # Sidekiq for simple, efficient background processing for Ruby.
-gem 'sidekiq', '~> 6.1.3'
+gem "sidekiq", "~> 6.1.3"
 
 group :development, :test do
   gem "awesome_print"
@@ -79,6 +79,7 @@ end
 group :development do
   gem "bundler-audit"
   gem "listen"
+  gem "letter_opener"
   # Use console on exceptions pages [https://github.com/rails/web-console]
   gem "web-console"
 
