@@ -1,6 +1,5 @@
 # frozen_string_literal: true
 
-
 class DeviseTurboFailureApp < Devise::FailureApp
   def respond
     if request_format == :turbo_stream
@@ -29,7 +28,7 @@ Devise.setup do |config|
   # confirmation, reset password and unlock tokens in the database.
   # Devise will use the `secret_key_base` as its `secret_key`
   # by default. You can change it below and use your own secret key.
-  # config.secret_key = '9edef65229c419833b37ef628d2068f0585f2198d2a24f71c57dbf69ae4746b78c8c269bd1c4fa2cd12140981c263355c72b85f243f0d9e7e1be715099310062'
+  # config.secret_key = 'cd91bd80564bf25f244bd5ad88fe6cb3f04765116e89c96341b34abbb6e41270412847e7cee048fb035a3bcde0d98d35bfe1acb3b5a0ae42dd6b6176b946adaf'
 
   # ==> Controller configuration
   # Configure the parent class to the devise controllers.
@@ -39,7 +38,7 @@ Devise.setup do |config|
   # Configure the e-mail address which will be shown in Devise::Mailer,
   # note that it will be overwritten if you use your own mailer class
   # with default "from" parameter.
-  config.mailer_sender = 'please-change-me-at-config-initializers-devise@example.com'
+  config.mailer_sender = 'Rails Demo <demo@mdominiak.com>'
 
   # Configure the class responsible to send e-mails.
   # config.mailer = 'Devise::Mailer'
@@ -141,7 +140,7 @@ Devise.setup do |config|
   config.stretches = Rails.env.test? ? 1 : 12
 
   # Set up a pepper to generate the hashed password.
-  # config.pepper = 'a4eb81effcbc3cf93387577ea5a4350c12675e89a96cfba3e625fc437b124fb1e13a42b8c1166a32403c8e8e825fe698c36a88cacec66aa25385dfe339585174'
+  # config.pepper = 'db55401937f003ed3bf53e7a197276daab779524bd0290b37df844c5e38e70a06cbaefe9dc53d95341f04a2998c2eec201f06dac5560c0ee05e41c5a8805a70b'
 
   # Send a notification to the original email when the user's email is changed.
   # config.send_email_changed_notification = false
@@ -271,7 +270,7 @@ Devise.setup do |config|
 
   # ==> Navigation configuration
   # Lists the formats that should be treated as navigational. Formats like
-  # :html should redirect to the sign in page when the user does not have
+  # :html, should redirect to the sign in page when the user does not have
   # access, but formats like :xml or :json, should return 401.
   #
   # If you have any extra navigational formats, like :iphone or :mobile, you
@@ -294,8 +293,8 @@ Devise.setup do |config|
   #
   config.warden do |manager|
     manager.failure_app = DeviseTurboFailureApp
-    #   manager.intercept_401 = false
-    #   manager.default_strategies(scope: :user).unshift :some_external_strategy
+  #   manager.intercept_401 = false
+  #   manager.default_strategies(scope: :user).unshift :some_external_strategy
   end
 
   # ==> Mountable engine configurations
@@ -312,14 +311,12 @@ Devise.setup do |config|
   # so you need to do it manually. For the users scope, it would be:
   # config.omniauth_path_prefix = '/my_engine/users/auth'
 
-  # ==> Hotwire/Turbo configuration
-  # When using Devise with Hotwire/Turbo, the http status for error responses
-  # and some redirects must match the following. The default in Devise for existing
-  # apps is `200 OK` and `302 Found respectively`, but new apps are generated with
-  # these new defaults that match Hotwire/Turbo behavior.
-  # Note: These might become the new default in future versions of Devise.
-  config.responder.error_status = :unprocessable_entity
-  config.responder.redirect_status = :see_other
+  # ==> Turbolinks configuration
+  # If your app is using Turbolinks, Turbolinks::Controller needs to be included to make redirection work correctly:
+  #
+  # ActiveSupport.on_load(:devise_failure_app) do
+  #   include Turbolinks::Controller
+  # end
 
   # ==> Configuration for :registerable
 

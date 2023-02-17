@@ -54,7 +54,7 @@ gem "bootsnap", require: false
 
 # Authentication
 #
-gem 'devise', '~> 4.8'
+gem "devise", "~> 4.8"
 
 # FirendlyId to create pretty URLs and work with human-friendly strings as if they were numeric ids.
 gem "friendly_id", "~> 5.4.0"

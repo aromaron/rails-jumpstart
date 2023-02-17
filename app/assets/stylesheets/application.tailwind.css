@@ -10,15 +10,47 @@
     @apply bg-black;
   }
 
-  [type="submit"] {
-    @apply py-2 px-3 border border-gray-500;
+  .btn-primary {
+    @apply w-full px-5 py-2.5 rounded-lg font-medium cursor-pointer bg-primary-600 hover:bg-primary-700 focus:outline-none focus:ring-4 focus:ring-primary-800;
   }
-}
 
-.alert-danger {
-  @apply bg-red-300 text-red-900 border-red-500;
-}
+  .link-primary {
+    @apply font-medium hover:underline text-primary-500 focus-visible:outline-primary-400 focus-visible:outline focus-visible:rounded;
+  }
 
-.alert-success {
-  @apply bg-green-300 text-green-900 border-green-500;
+  .text-secondary {
+    @apply text-gray-400;
+  }
+
+  .form-label {
+    @apply block text-sm font-medium mb-2;
+  }
+
+  .form-control {
+    @apply block w-full p-2.5 rounded-lg bg-gray-700 border border-gray-600 placeholder-gray-400 focus:border-primary-500 focus:ring-2 focus:ring-primary-800;
+  }
+
+  .form-checkbox {
+    @apply rounded bg-gray-700 border border-gray-600 focus:border-primary-500 focus:ring-2 focus:ring-offset-0 focus:ring-primary-800 focus:outline-0;
+  }
+
+  .main {
+    @apply mx-auto p-4 sm:max-w-sm;
+  }
+
+  .main--heading {
+    @apply text-center text-xl font-bold leading-tight tracking-tight my-4;
+  }
+
+  .main--form {
+    @apply space-y-4 mb-5;
+  }
+
+  .alert-danger {
+    @apply bg-red-300 text-red-900 border-red-500;
+  }
+
+  .alert-success {
+    @apply bg-green-300 text-green-900 border-green-500;
+  }
 }
