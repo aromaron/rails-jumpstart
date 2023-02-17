@@ -3,7 +3,13 @@
     Sign up to RailsJumpstart
   </h1>
 
-  <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { class: 'main--form' }) do |f| %>
+    <%= form_for(resource, as: resource_name, url: registration_path(resource_name),
+                                              html: { class: 'main--form', novalidate: true },
+                                              data: {
+                                                controller: "form_validation",
+                                                target: "form.form",
+                                                action: "ajax:beforeSend->form#submitForm"
+                                              }) do |f| %>
     <%= render "devise/shared/error_messages", resource: resource %>
 
     <div>
