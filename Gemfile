@@ -56,6 +56,9 @@ gem "bootsnap", require: false
 #
 #
 
+# FirendlyId to create pretty URLs and work with human-friendly strings as if they were numeric ids.
+gem 'friendly_id', '~> 5.4.0'
+
 group :development, :test do
   gem "awesome_print"
   # Bullet to catch N+1 queries
