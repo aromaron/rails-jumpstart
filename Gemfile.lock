@@ -105,6 +105,7 @@ GEM
       responders
       warden (~> 1.2.3)
     docile (1.4.0)
+    dry-cli (1.0.0)
     erubi (1.12.0)
     factory_bot (6.2.1)
       activesupport (>= 5.0.0)
@@ -122,9 +123,6 @@ GEM
       rails (>= 5.2)
     i18n (1.12.0)
       concurrent-ruby (~> 1.0)
-    importmap-rails (1.1.5)
-      actionpack (>= 6.0.0)
-      railties (>= 6.0.0)
     io-console (0.6.0)
     irb (1.6.2)
       reline (>= 0.3.0)
@@ -183,6 +181,8 @@ GEM
       nio4r (~> 2.0)
     racc (1.6.2)
     rack (2.2.6.2)
+    rack-proxy (0.7.6)
+      rack
     rack-test (2.0.2)
       rack (>= 1.3)
     rails (7.0.4.2)
@@ -280,6 +280,13 @@ GEM
       concurrent-ruby (~> 1.0)
     unicode-display_width (2.4.2)
     uniform_notifier (1.16.0)
+    vite_rails (3.0.14)
+      railties (>= 5.1, < 8)
+      vite_ruby (~> 3.0, >= 3.2.2)
+    vite_ruby (3.2.14)
+      dry-cli (>= 0.7, < 2)
+      rack-proxy (~> 0.6, >= 0.6.1)
+      zeitwerk (~> 2.2)
     warden (1.2.9)
       rack (>= 2.0.9)
     web-console (4.2.0)
@@ -314,7 +321,6 @@ DEPENDENCIES
   faker
   friendly_id (~> 5.4.0)
   heroicon
-  importmap-rails
   jbuilder
   letter_opener
   listen
@@ -333,6 +339,7 @@ DEPENDENCIES
   tailwindcss-rails
   turbo-rails
   tzinfo-data
+  vite_rails
   web-console
   webdrivers
 

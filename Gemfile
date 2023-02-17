@@ -15,9 +15,6 @@ gem "pg", "~> 1.1"
 # Use the Puma web server [https://github.com/puma/puma]
 gem "puma", "~> 5.0"
 
-# Use JavaScript with ESM import maps [https://github.com/rails/importmap-rails]
-gem "importmap-rails"
-
 # Hotwire's SPA-like page accelerator [https://turbo.hotwired.dev]
 gem "turbo-rails"
 
@@ -67,6 +64,8 @@ gem "name_of_person"
 
 # Sidekiq for simple, efficient background processing for Ruby.
 gem "sidekiq", "~> 6.1.3"
+
+gem 'vite_rails'
 
 group :development, :test do
   gem "awesome_print"
