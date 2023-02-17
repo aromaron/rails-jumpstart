@@ -59,6 +59,9 @@ gem "devise", "~> 4.8"
 # FirendlyId to create pretty URLs and work with human-friendly strings as if they were numeric ids.
 gem "friendly_id", "~> 5.4.0"
 
+# Heroicon wrapper
+gem "heroicon"
+
 # NameOfPerson to present names for English-language applications where a basic model of first and last name(s) combined is sufficient
 gem "name_of_person"
 
@@ -71,15 +74,16 @@ group :development, :test do
   gem "bullet"
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem "debug", platforms: %i[mri mingw x64_mingw]
+  gem "bundler-audit", ">= 0.7.0", require: false
   gem "factory_bot_rails"
+  gem "faker"
   gem "pry-rails"
-  gem "standard"
 end
 
 group :development do
-  gem "bundler-audit"
   gem "listen"
   gem "letter_opener"
+  gem "standard"
   # Use console on exceptions pages [https://github.com/rails/web-console]
   gem "web-console"
 
@@ -91,6 +95,7 @@ group :development do
 end
 
 group :test do
+  gem "simplecov", require: false
   # Use system testing [https://guides.rubyonrails.org/testing.html#system-testing]
   gem "capybara"
   gem "selenium-webdriver"
