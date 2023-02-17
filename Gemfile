@@ -66,6 +66,7 @@ group :development, :test do
 end
 
 group :development do
+  gem 'bundler-audit'
   gem "listen"
   # Use console on exceptions pages [https://github.com/rails/web-console]
   gem "web-console"
