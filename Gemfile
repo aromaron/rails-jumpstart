@@ -59,6 +59,12 @@ gem "bootsnap", require: false
 # FirendlyId to create pretty URLs and work with human-friendly strings as if they were numeric ids.
 gem 'friendly_id', '~> 5.4.0'
 
+# NameOfPerson to present names for English-language applications where a basic model of first and last name(s) combined is sufficient
+gem 'name_of_person'
+
+# Sidekiq for simple, efficient background processing for Ruby.
+gem 'sidekiq', '~> 6.1.3'
+
 group :development, :test do
   gem "awesome_print"
   # Bullet to catch N+1 queries
