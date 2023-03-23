@@ -15,6 +15,9 @@ gem "pg", "~> 1.1"
 # Use the Puma web server [https://github.com/puma/puma]
 gem "puma", "~> 5.0"
 
+# Use JavaScript with ESM import maps [https://github.com/rails/importmap-rails]
+gem "importmap-rails"
+
 # Hotwire's SPA-like page accelerator [https://turbo.hotwired.dev]
 gem "turbo-rails"
 
@@ -46,11 +49,9 @@ gem "bootsnap", require: false
 # gem "sassc-rails"
 
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
-# gem "image_processing", "~> 1.2"
-#
+gem "image_processing", "~> 1.2"
 
 # Authentication
-#
 gem "devise", "~> 4.8"
 
 # FirendlyId to create pretty URLs and work with human-friendly strings as if they were numeric ids.
@@ -65,15 +66,14 @@ gem "name_of_person"
 # Sidekiq for simple, efficient background processing for Ruby.
 gem "sidekiq", "~> 6.1.3"
 
-gem 'vite_rails'
-
 group :development, :test do
   gem "awesome_print"
   # Bullet to catch N+1 queries
   gem "bullet"
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
-  gem "debug", platforms: %i[mri mingw x64_mingw]
   gem "bundler-audit", ">= 0.7.0", require: false
+  gem "database_cleaner"
+  gem "debug", platforms: %i[mri mingw x64_mingw]
   gem "factory_bot_rails"
   gem "faker"
   gem "pry-rails"

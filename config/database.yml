@@ -82,5 +82,3 @@ test:
 production:
   <<: *default
   database: rails_jumpstart_production
-  username: rails_jumpstart
-  password: <%= ENV["RAILS_JUMPSTART_DATABASE_PASSWORD"] %>
